@@ -14,10 +14,11 @@ class EmailColumn(BaseLinkColumn):
 
     It's common to have a email value in a row hyperlinked to another page.
 
-    :param  attrs: a `dict` of HTML attributes that are added to the rendered
-                   ``<a href="...">...</a>`` tag
-    :param   text: Either static text, or a callable. If set, this value will be
-                   used to render the text inside link instead of value (default)
+    Arguments:
+        attrs (dict): HTML attributes that are added to the rendered
+            ``<a href="...">...</a>`` tag
+        text: Either static text, or a callable. If set, this will be used to
+            render the text inside link instead of the value
 
     Example:
 
