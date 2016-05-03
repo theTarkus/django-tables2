@@ -20,9 +20,7 @@ class EmailColumn(BaseLinkColumn):
         text: Either static text, or a callable. If set, this will be used to
             render the text inside link instead of the value
 
-    Example:
-
-    .. code-block:: python
+    Example::
 
         # models.py
         class Person(models.Model):

@@ -15,7 +15,7 @@ class DateTimeColumn(TemplateColumn):
     Arguments:
         format (str): format string for datetime (optional).
                       Note that *format* uses Django's `date` template tag syntax.
-        short (bool): if *format* is not specified, use Django's
+        short (bool): if `format` is not specified, use Django's
                       ``SHORT_DATETIME_FORMAT``, else ``DATETIME_FORMAT``
     """
     def __init__(self, format=None, short=True, *args, **kwargs):
