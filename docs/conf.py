@@ -4,7 +4,7 @@ import re
 import sys
 from os.path import abspath
 
-os.environ["DJANGO_SETTINGS_MODULE"] = "example.settings"
+os.environ['DJANGO_SETTINGS_MODULE'] = 'example.settings'
 
 # import project
 sys.path.insert(0, abspath('..'))
@@ -17,12 +17,13 @@ with open('../django_tables2/__init__.py', 'rb') as f:
 version = release.rpartition('.')[0]
 
 
-default_role = "py:obj"
+default_role = 'py:obj'
 
 
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.doctest',
 ]
