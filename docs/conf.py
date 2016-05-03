@@ -30,7 +30,7 @@ extensions = [
 
 intersphinx_mapping = {
     'python': ('http://docs.python.org/dev/', None),
-    'django': ('http://docs.djangoproject.com/en/dev/', 'http://docs.djangoproject.com/en/dev/_objects/'),
+    'django': ('http://docs.djangoproject.com/en/stable/', 'http://docs.djangoproject.com/en/stable/_objects/'),
 }
 
 

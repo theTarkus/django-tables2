@@ -26,7 +26,8 @@ class Library(object):
         """
         Return a column object suitable for model field.
 
-        :returns: column object of `None`
+        Returns:
+            `.Column` object or `None`
         """
         # iterate in reverse order as columns are registered in order
         # of least to most specialised (i.e. Column is registered
@@ -59,21 +60,22 @@ class Column(object):
         attrs (dict): HTML attributes for elements that make up the column.
             This API is extended by subclasses to allow arbitrary HTML
             attributes to be added to the output.
-        By default `.Column` supports:
 
-        - *th* -- ``table/thead/th`` elements
-        - *td* -- ``table/tbody/tr/td`` elements
-        - *cell* -- fallback if *th* or *td* isn't defined
+            By default `.Column` supports:
+
+             - *th* -- ``table/thead/tr/th`` elements
+             - *td* -- ``table/tbody/tr/td`` elements
+             - *cell* -- fallback if *th* or *td* isn't defined
         accessor (str or `~.Accessor`): An accessor that describes how to
             extract values for this column from the :term:`table data`.
         default (str or callable): The default value for the column. This can be
             a value or a callable object [1]_. If an object in the data provides
             `None` for a column, the default will be used instead.
 
-        The default value may affect ordering, depending on the type of data
-        the table is using. The only case where ordering is not affected is
-        when a `.QuerySet` is used as the table data (since sorting is
-        performed by the database).
+            The default value may affect ordering, depending on the type of data
+            the table is using. The only case where ordering is not affected is
+            when a `.QuerySet` is used as the table data (since sorting is
+            performed by the database).
         order_by (str, tuple or `.Accessor`): Allows one or more accessors to be
             used for ordering rather than *accessor*.
         orderable (bool): If `False`, this column will not be allowed to
